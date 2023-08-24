@@ -1,0 +1,74 @@
+- Section untuk membagi tiap" halaman
+
+- row adalah baris untuk grid
+
+- Responsive Col ada grid 12, HP = xs<768px, Tablet =  sm>=768px, Laptop = >=992px, Pc = >= 1200px
+
+- col-sm-offset-1 digunakan untuk menyeimbangkan kolom apabila container pada row gridnya kurang dari 12 
+
+----------------------
+#JQuery
+------------------------
+- $('') = tolong carikan saya sebuah elemen
+------------------------
+- $('page-scroll') = elemen yang bernama page-scroll
+------------------------
+- $('page-scroll').on('click', function() {}) = pada saat dia di klik, jalankan sebuah fungsi berikut ini
+------------------------
+- console.log('ok'); = untuk mengetahui apakah java nya terkoneksi lewat inspect console
+------------------------
+- var Tujuan = $(this).attr('href'); = JQuery cari elemen yang bersangkutan (this) / a yang bersangkutan, ambil isi dari atribut (.attr('href'); )
+------------------------
+- QnA = Ngapain ngambil elemennya?, Answers = Supaya mengetahui jarak elemen tersebut ke paling atas website kita
+------------------------
+
+------------------------
+#Paralax
+------------------------
+#Paralax Jumbotron
+------------------------
+- $(window) = JQuery tolong carikan saya elemen 'window' / seluruhnya
+------------------------
+- $(window).scroll(function() { });= lalu pada saat window ini kita scroll, jalankan fungsi berikut ini
+------------------------
+- var wScroll = $(this).scrollTop(); = untuk mendapatkan jarak scroll
+------------------------
+- $('.jumbotron img').css = tolong carirkan sara img yang ada di dalam jumbotron
+------------------------
+- .css({
+        'transform' : 'translate(0px, '+ wScroll/4 +'%)'
+    });
+    = lalu kita ubah cssnya, dan ubah property css transform dan translate
+------------------------
+- (0px, '+ wScroll/4 +'%)' = 0px sama dengan kordinat X, '+ wScroll/4   +'% untuk kordinat sumbu Y, /4 ini di bagi 4
+------------------------
+
+------------------------
+#Paralax Portfolio
+------------------------
+- style.css 
+    .portfolio .thumbnail.muncul {
+        opacity: 1;
+        transform: translate(0, 0);
+    } = Jika ada class .thumbnail terus class .muncul untuk di JQuerynya.
+------------------------
+- if ( wScroll > nilai ) = Untuk mengetahui nilai ketinggian pada portfolio.
+------------------------
+- if ( wScroll > $('.portfolio').offset().top - 250 ) = Jquery tolong carikan saya protfolio, lalu cari offsetnya, offset adalah jarak atasnya jarak elemenya ke atasnya, sebesar -250px.
+------------------------
+- $('.portfolio .thumbnail') = Jquery tolong carikan saya portfolio lalu thumbnail.
+------------------------
+- .each(function(i)) = setiap elemennya kita berikan sebuah fungsi, fungsinya apa?
+------------------------
+- setTimeout(function()) = Untuk menunggu beberapa detik munculnya pada setiap elemennya, didalam setTimeout kita jalankan sebuah fungsi
+------------------------
+-  $('.portfolio .thumbnail').eq(i).addClass('muncul'); = ini fungsinya
+------------------------
+- eq(i) = elemen yang ke berapa dari total elemen, i adalah index harus dikasih juga di function eachnya
+------------------------
+- .addClass('muncul'); = tambahkan class baru yaitu .muncul
+------------------------
+- 300 = adalah timer munculnya
+------------------------
+* (i+1) = guna untuk munculnya secara bergantian pada elemennya, i nilai nya adalah 0, jadi kita gunakan +1 untuk dimulai dari satu 1
+------------------------
